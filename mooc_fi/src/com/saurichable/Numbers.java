@@ -1,7 +1,7 @@
 package com.saurichable;
 
 public class Numbers {
-    public static void NumbersMethod(){
+    public static void numbersMethod(){
         System.out.println("Four: " + (2 + 2));
         System.out.println("But! Twenty-two: " + 2 + 2);
         /*

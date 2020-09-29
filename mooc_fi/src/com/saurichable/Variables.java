@@ -3,7 +3,7 @@ package com.saurichable;
 import java.util.Scanner;
 
 public class Variables {
-    public static void VariablesMethod(){
+    public static void variablesMethod(){
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Write a message: ");

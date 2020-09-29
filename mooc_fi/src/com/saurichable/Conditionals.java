@@ -3,7 +3,7 @@ package com.saurichable;
 import java.util.Scanner;
 
 public class Conditionals {
-    public static void ConditionalsMethod(){
+    public static void conditionalsMethod(){
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Write a number: ");
