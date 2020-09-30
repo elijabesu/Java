@@ -23,13 +23,9 @@ public class Methods {
     variable whose value is to be returned).
      */
 
-    public static int alwaysReturnsTen() {
-        return 10;
-    }
+    public static int alwaysReturnTen() { return 10; }
 
-    public static String returnsAString(String str) {
-        return "Hello " + str + "!";
-    }
+    public static String returnString(String str) { return "Hello " + str + "!"; }
 
     /*
     If a method has the form public static void nameOfMethod() it is possible to return from it — in other words, to
@@ -43,5 +39,82 @@ public class Methods {
         }
 
         System.out.println("" + numerator + " / " + denominator + " = " + (1.0 * numerator / denominator));
+    }
+
+    public static int sumOfTwo(int x, int y) { return x + y; }
+
+    public static int smaller(int x, int y) {
+        if (x < y) { return x; }
+        else { return y; }
+    }
+
+    public static int bigger(int x, int y) {
+        if (x > y) { return x; }
+        else { return y; }
+    }
+
+    public static void printStars(int number) {
+        int i = 1;
+        while (i <= number) {
+            System.out.print("*");
+            i++;
+        }
+        System.out.println("");
+    }
+    public static void printSquare(int size) {
+        int i = 1;
+        while (i <= size) {
+            printStars(size);
+            i++;
+        }
+    }
+    public static void printRectangle(int width, int height) {
+        int i = 1;
+        while (i <= height) {
+            printStars(width);
+            i++;
+        }
+    }
+    public static void printLeftTriangle(int size) {
+        int i = 1;
+        while (i <= size) {
+            printStars(i);
+            i++;
+        }
+    }
+    public static void printSpaces(int number) {
+        int i = 1;
+        while (i <= number) {
+            System.out.print(" ");
+            i++;
+        }
+    }
+    public static void printRightTriangle(int size) {
+        int i = 1;
+        int j;
+        while (i <= size) {
+            j = size - i;
+            printSpaces(j);
+            printStars(i);
+            i++;
+        }
+    }
+    public static void printChristmasTree(int height) {
+        int i = 1;
+        int j;
+        while (i <= height) {
+            j = height - i;
+            printSpaces(j);
+            if (i == 1) { printStars(i); }
+            else { printStars(i+i-1); }
+            i++;
+        }
+        printBottomOfTree(height - 2, 3, 2);
+    }
+    public static void printBottomOfTree(int spaces, int stars, int times) {
+        for (int i = 0; i < times; i++) {
+            printSpaces(spaces);
+            printStars(stars);
+        }
     }
 }

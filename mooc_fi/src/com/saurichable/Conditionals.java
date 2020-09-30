@@ -6,7 +6,7 @@ public class Conditionals {
     public static void conditionalsMethod(){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Write a number: ");
+        System.out.println("Write a year:");
         int value = Integer.valueOf(scanner.nextLine());
         if (value == 1984) {
             System.out.println("Orwell");
@@ -16,7 +16,7 @@ public class Conditionals {
             System.out.println("I do not care");
         }
 
-        System.out.println("Enter a grade: ");
+        System.out.println("Enter a grade:");
         int grade = Integer.valueOf(scanner.nextLine());
         if (grade < 0) {
             System.out.println("Incorrect value.");
@@ -41,7 +41,7 @@ public class Conditionals {
         (variable1 == variable2), we cannot compare the equality of strings using two equals signs. When comparing
         strings we use the equals-command, which is related to string variables.
          */
-        System.out.println("Enter a string: ");
+        System.out.println("Enter a string:");
         String str = scanner.nextLine();
         if (str.equals("a string")) {
             System.out.println("yay");

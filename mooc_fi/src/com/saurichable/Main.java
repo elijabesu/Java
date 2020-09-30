@@ -20,13 +20,30 @@ public class Main {
         part_2Object.factorial();
         part_2Object.fiveParts();
 
-         */
-
         Methods methodsObject = new Methods();
         methodsObject.methodsMethod(5,6);
-        int number = methodsObject.alwaysReturnsTen();
+        int number = methodsObject.alwaysReturnTen();
         System.out.println("The method returned: " + number);
-        String str = methodsObject.returnsAString("Ellie");
+        String str = methodsObject.returnString("Ellie");
         System.out.println("The method returned: " + str);
+        System.out.println("The sumOfTwo method returned: " + methodsObject.sumOfTwo(5, 6));
+        System.out.println("The smaller number is: " + methodsObject.smaller(10,5));
+        System.out.println("The bigger number is: " + methodsObject.bigger(10,5));
+
+        methodsObject.printStars(5);
+        methodsObject.printSquare(4);
+        methodsObject.printRectangle(17, 3);
+        methodsObject.printLeftTriangle(4);
+        methodsObject.printRightTriangle(4);
+        methodsObject.printChristmasTree(10);
+
+         */
+
+        // Part 3
+        Lists listsObject = new Lists();
+        listsObject.gettingFromLists(0);
+        //listsObject.printSecondPlusThird();
+        //System.out.println(listsObject.returnList());
+        listsObject.loopingLists();
     }
 }
