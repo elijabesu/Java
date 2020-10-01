@@ -37,13 +37,18 @@ public class Main {
         methodsObject.printRightTriangle(4);
         methodsObject.printChristmasTree(10);
 
-         */
-
         // Part 3
         Lists listsObject = new Lists();
         listsObject.gettingFromLists(0);
-        //listsObject.printSecondPlusThird();
-        //System.out.println(listsObject.returnList());
+        listsObject.printSecondPlusThird();
+        System.out.println(listsObject.returnList());
         listsObject.loopingLists();
+        listsObject.indexOfSmallest();
+        listsObject.forEachLoop();
+        listsObject.sumForEach();
+        listsObject.onList();
+        listsObject.testPrintNumbersInRange();
+         */
+        Arrays arraysObject = new Arrays();
     }
 }

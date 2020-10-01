@@ -35,11 +35,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef503c00-ef4a-469e-9eb6-fa3defb0336b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/saurichable/Lists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/saurichable/Arrays.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/saurichable/Lists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/saurichable/Lists.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/saurichable/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/saurichable/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/saurichable/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/saurichable/Methods.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,30 +165,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601456514632" />
-    <state x="587" y="88" key="CommitChangelistDialog2" timestamp="1601472491557">
+    <state x="587" y="88" key="CommitChangelistDialog2" timestamp="1601538049317">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="587" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601472491557" />
+    <state x="587" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601538049317" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1601456712555">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601456712555" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1601472492547">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1601538030615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601472492547" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1601472492547">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601538030615" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1601538030615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601472492547" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1601472492547">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601538030615" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1601538030615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601472492547" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1601472492547">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601538030615" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1601538030615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601472492547" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601538030615" />
     <state x="540" y="263" key="IDE.errors.dialog" timestamp="1601459481886">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -206,10 +205,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="790" y="389" key="VCS.EditChangelistDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601459649054" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1601375242459">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1601533098166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601375242459" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601533098166" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601471900241">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
