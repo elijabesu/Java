@@ -50,5 +50,12 @@ public class Main {
         listsObject.testPrintNumbersInRange();
          */
         Arrays arraysObject = new Arrays();
+        arraysObject.creatingArrays();
+        arraysObject.iteratingArrays();
+        arraysObject.testingFindIndex();
+        int[] numbers = {5, 1, 3, 4, 2};
+        System.out.println(arraysObject.sumOfNumbersInArray(numbers));
+        arraysObject.printNeatly(numbers);
+        arraysObject.printArrayInStars(numbers);
     }
 }
