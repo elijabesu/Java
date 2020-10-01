@@ -48,7 +48,7 @@ public class Main {
         listsObject.sumForEach();
         listsObject.onList();
         listsObject.testPrintNumbersInRange();
-         */
+
         Arrays arraysObject = new Arrays();
         arraysObject.creatingArrays();
         arraysObject.iteratingArrays();
@@ -57,5 +57,15 @@ public class Main {
         System.out.println(arraysObject.sumOfNumbersInArray(numbers));
         arraysObject.printNeatly(numbers);
         arraysObject.printArrayInStars(numbers);
+
+        Strings stringsObject = new Strings();
+        //stringsObject.isItTrue();
+        //stringsObject.password();
+        //stringsObject.splittingString();
+        //stringsObject.containAV();
+        //stringsObject.firstCharacter("Hellu");
+        stringsObject.personalDetails();
+
+         */
     }
 }
