@@ -92,10 +92,15 @@ public class Main {
         counter.decrement();
         counter.printValue();
 
-         */
         OOP oopObject = new OOP();
         oopObject.objectsInList();
         oopObject.userInputObjectsInList();
         oopObject.userInputBooksList();
+
+        Files filesObject = new Files();
+        filesObject.fileReading();
+        filesObject.teamsFileReading();
+
+         */
     }
 }
