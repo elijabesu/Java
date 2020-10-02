@@ -77,7 +77,7 @@ public class Strings {
         ArrayList<Integer> years = new ArrayList<>();
         while (true){
             detail = scanner.nextLine();
-            if (detail.equals("")) { break; }
+            if (detail.isEmpty()) { break; }
             String[] temp = detail.split(",");
             names.add(temp[0]);
             years.add(Integer.valueOf(temp[1]));

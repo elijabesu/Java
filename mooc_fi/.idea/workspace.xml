@@ -34,10 +34,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef503c00-ef4a-469e-9eb6-fa3defb0336b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/saurichable/Strings.java" afterDir="false" />
+    <list default="true" id="ef503c00-ef4a-469e-9eb6-fa3defb0336b" name="Default Changelist" comment="OOP">
+      <change afterPath="$PROJECT_DIR$/src/com/saurichable/Books.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/saurichable/DecreasingCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/saurichable/OOP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/saurichable/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/saurichable/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/saurichable/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/saurichable/Strings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/saurichable/Strings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601547005238</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finished Strings">
+      <created>1601555463562</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601555463562</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,7 +180,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished Lists" />
     <MESSAGE value="Finished Arrays" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Arrays" />
+    <MESSAGE value="Finished Strings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Strings" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="337" key="#BuildArtifactsBeforeRunChooser" timestamp="1601456744533">
@@ -180,34 +192,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601456753574" />
+    <state x="721" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1601636153676">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="721" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601636153676" />
     <state x="690" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1601456514632">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601456514632" />
-    <state x="587" y="88" key="CommitChangelistDialog2" timestamp="1601547001388">
+    <state x="587" y="88" key="CommitChangelistDialog2" timestamp="1601637695949">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="587" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601547001388" />
+    <state x="587" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601637695949" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1601456712555">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601456712555" />
-    <state width="938" height="282" key="GridCell.Tab.0.bottom" timestamp="1601555393975">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1601637141795">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601555393975" />
-    <state width="938" height="282" key="GridCell.Tab.0.center" timestamp="1601555393975">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601637141795" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1601637141795">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601555393975" />
-    <state width="938" height="282" key="GridCell.Tab.0.left" timestamp="1601555393975">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601637141795" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1601637141795">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601555393975" />
-    <state width="938" height="282" key="GridCell.Tab.0.right" timestamp="1601555393975">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601637141795" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1601637141795">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601555393975" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601637141795" />
     <state x="540" y="263" key="IDE.errors.dialog" timestamp="1601459481886">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -224,17 +240,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="790" y="389" key="VCS.EditChangelistDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601459649054" />
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1601547009746">
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1601555489939">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601547009746" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1601533098166">
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601555489939" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1601626756220">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601533098166" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601553274426">
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601626756220" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601623971359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601553274426" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601623971359" />
   </component>
 </project>

@@ -3,7 +3,7 @@ package com.saurichable;
 public class Main {
     public static void main(String[] args) {
         /*
-        // Part 1
+            // Part 1
         Variables variablesObject = new Variables();
         variablesObject.variablesMethod();
 
@@ -13,7 +13,7 @@ public class Main {
         Conditionals conditionalsObject = new Conditionals();
         conditionalsObject.conditionalsMethod();
 
-        // Part 2
+            // Part 2
         Part_2 part_2Object = new Part_2();
         part_2Object.whileSum5();
         part_2Object.forSum5();
@@ -37,7 +37,7 @@ public class Main {
         methodsObject.printRightTriangle(4);
         methodsObject.printChristmasTree(10);
 
-        // Part 3
+            // Part 3
         Lists listsObject = new Lists();
         listsObject.gettingFromLists(0);
         listsObject.printSecondPlusThird();
@@ -59,13 +59,43 @@ public class Main {
         arraysObject.printArrayInStars(numbers);
 
         Strings stringsObject = new Strings();
-        //stringsObject.isItTrue();
-        //stringsObject.password();
-        //stringsObject.splittingString();
-        //stringsObject.containAV();
-        //stringsObject.firstCharacter("Hellu");
+        stringsObject.isItTrue();
+        stringsObject.password();
+        stringsObject.splittingString();
+        stringsObject.containAV();
+        stringsObject.firstCharacter("Hellu");
         stringsObject.personalDetails();
 
+            // Part 4
+        Person ada = new Person("Ada");
+        Person antti = new Person("Antti");
+        Person martin = new Person("Martin");
+        ada.printPerson();
+        antti.printPerson();
+        martin.printPerson();
+        ada.growOlder();
+        ada.growOlder();
+        ada.printPerson();
+        antti.printPerson();
+        System.out.println(martin.getName() + "'s age plus 15: " + (martin.getName() + 15));
+        System.out.println(ada.isOfLegalAge());
+        System.out.println(martin); // this calls toString method
+
+        DecreasingCounter counter = new DecreasingCounter(3);
+        counter.printValue();
+        counter.reset();
+        counter.printValue();
+        counter.decrement();
+        counter.printValue();
+        counter.start(2);
+        counter.printValue();
+        counter.decrement();
+        counter.printValue();
+
          */
+        OOP oopObject = new OOP();
+        oopObject.objectsInList();
+        oopObject.userInputObjectsInList();
+        oopObject.userInputBooksList();
     }
 }
