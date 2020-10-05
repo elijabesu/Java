@@ -108,7 +108,6 @@ public class Main {
             clock.advance();
         }
 
-         */
         Person5 owo = new Person5("Napoleone Buonaparte", 51, 80, 1.70);
         System.out.println(owo);
 
@@ -117,5 +116,77 @@ public class Main {
         Person ada = new Person("Ada");
         System.out.println(paul);
         System.out.println(ada);
+
+        // primitives
+        int i = 5;
+        int j = i;
+        j += 2; // this does NOT affect i
+        System.out.println(i + ", " + j);
+        // references
+        Person john = paul; // now they both reference the same object
+        john.growOlder(); // this DOES affect paul
+        System.out.println(paul);
+
+        john = new Person("John", 52);
+        System.out.println(john);
+        john = null;
+
+        Person ellie = new Person("Ellie", 23, 158);
+        AmusementParkRide rc = new AmusementParkRide("RollerCoaster", 150);
+        if (rc.allowedToRide(ellie)) {
+            System.out.println("Enjoy the ride, " + ellie.getName() + "!");
+        } else {
+            System.out.println("Sorry, you are too short.");
+        }
+        System.out.println(rc);
+
+        HealthStation childrensHospital = new HealthStation();
+
+        Person ethan = new Person("Ethan", 1, 110, 7);
+        Person peter = new Person("Peter", 33, 176, 85);
+
+        System.out.println(ethan.getName() + " weight: " + childrensHospital.weigh(ethan) + " kilos");
+        System.out.println(peter.getName() + " weight: " + childrensHospital.weigh(peter) + " kilos");
+        childrensHospital.feed(ethan);
+        childrensHospital.feed(ethan);
+        childrensHospital.feed(ethan);
+        System.out.println("");
+        System.out.println(ethan.getName() + " weight: " + childrensHospital.weigh(ethan) + " kilos");
+        System.out.println(peter.getName() + " weight: " + childrensHospital.weigh(peter) + " kilos");
+        System.out.println("weighings performed: " + childrensHospital.getWeighings());
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(peter);
+        System.out.println("weighings performed: " + childrensHospital.getWeighings());
+
+        PaymentCard petesCard = new PaymentCard(10);
+        System.out.println("money " + petesCard.getBalance());
+        boolean wasSuccessful = petesCard.takeMoney(8);
+        System.out.println("successfully withdrew: " + wasSuccessful);
+        System.out.println("money " + petesCard.getBalance());
+        wasSuccessful = petesCard.takeMoney(4);
+        System.out.println("successfully withdrew: " + wasSuccessful);
+        System.out.println("money " + petesCard.getBalance());
+
+        PaymentTerminal unicafeExactum = new PaymentTerminal();
+        double change = unicafeExactum.eatAffordably(10);
+        System.out.println("remaining change " + change);
+        change = unicafeExactum.eatAffordably(5);
+        System.out.println("remaining change " + change);
+        change = unicafeExactum.eatHeartily(4.3);
+        System.out.println("remaining change " + change);
+        System.out.println(unicafeExactum);
+
+         */
+        PaymentTerminal unicafeExactum = new PaymentTerminal();
+        System.out.println(unicafeExactum);
+        PaymentCard annesCard = new PaymentCard(2);
+        System.out.println("amount of money on the card is " + annesCard.getBalance() + " euros");
+        boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        System.out.println("there was enough money: " + wasSuccessful);
+        unicafeExactum.addMoneyToCard(annesCard, 100);
+        wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        System.out.println("there was enough money: " + wasSuccessful);
+        System.out.println("amount of money on the card is " + annesCard.getBalance() + " euros");
+        System.out.println(unicafeExactum);
     }
 }

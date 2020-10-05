@@ -1,40 +1,38 @@
 package com.saurichable;
 
-public class Person {
+public class PersonBirthday {
     private String name;
-    private int age;
+    private SimpleDate birthday;
     private double height;
     private double weight;
 
-    public Person(String name){
+    public PersonBirthday(String name){
         this(name, 0, 0, 0);
     }
-    public Person(String name, int age){
-        this(name, age, 0, 0);
+    public PersonBirthday(String name, SimpleDate birthday){
+        this(name, birthday, 0, 0);
     }
-    public Person(String name, int age, double height){
-        this(name, age, height, 0);
+    public PersonBirthday(String name, int day, int month, int year){
+        this(name, new SimpleDate(day, month, year), 0, 0);
     }
-    public Person(String name, int age, double height, double weight){
+    public PersonBirthday(String name, SimpleDate birthday, double height){
+        this(name, birthday, height, 0);
+    }
+    public PersonBirthday(String name, SimpleDate birthday, double height, double weight){
         this.name = name;
-        this.age = age;
+        this.birthday = birthday;
         this.height = height;
         this.weight = weight;
     }
 
-    public void growOlder(){
-        this.growOlder(1);
-    }
-    public void growOlder(int years) { this.age += years; }
-
     // Getters:
-    public int getAge(){ return this.age; }
+    public SimpleDate getBirthday(){ return this.birthday; }
     public String getName(){ return this.name; }
     public double getHeight() { return this.height; }
     public double getWeight(){ return this.weight; }
 
     // Setters:
-    public void setAge(int age){ this.age = age; }
+    public void setBirthday(SimpleDate birthday){ this.birthday = birthday; }
     public void setHeight(double height) { this.height = height; }
     public void setWeight(double weight) { this.weight = weight; }
 
