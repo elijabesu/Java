@@ -83,4 +83,27 @@ public class OOP {
             }
         }
     }
+
+    /*
+    Object-oriented programming is primarily about isolating concepts into their own entities or, in other words,
+    creating abstractions. Separating a concept into its own class is a good idea for many reasons. Firstly, certain
+    details can be hidden inside the class (abstracted).
+
+    An /Object/ refers to an independent entity that contains both data (instance variables) and behavior (methods).
+    Objects interact with one another through method calls — these method calls are used to both request information
+    from objects and give instructions to them. Each object hides its internal operations, providing access to its
+    functionality through clearly defined methods. Moreover, the object is independent of any other object that it
+    doesn't require to accomplish its task.
+
+    A /class/ defines the types of objects that can be created from it. It contains instance variables describing the
+    object's data, a constructor or constructors used to create it, and methods that define its behavior. Objects are
+    created from the class through constructors by using the new command.
+
+    The technique of having two (or more) constructors in a class is known as /constructor overloading/. A class can
+    have multiple constructors that differ in the number and/or type of their parameters. It's not, however, possible
+    to have two constructors with the exact same parameters.
+
+    Methods can be overloaded in the same way as constructors - multiple versions of a given method can be created.
+    Once again, the parameters of the different versions must be different.
+     */
 }

@@ -10,13 +10,24 @@ public class Person {
 
     // A constructor is defined after the instance variables. The name is always the same as the class name.
     public Person(String initialName){
+        /*
         this.age = 0; // sets the instance variable age of the newly created object (i.e., "this" object's age) to 0
         this.name = initialName;
         this.height = 0;
         this.weight = 0;
+         */
+        this(initialName, 0); // A constructor can be called from another constructor using the /this/ keyword.
     }
     /* If the programmer does not define a constructor for a class, Java automatically creates a default one for it.
     A default constructor is a constructor that doesn't do anything apart from creating the object. */
+
+    // A class may have multiple constructors
+    public Person(String name, int age){
+        this.age = age;
+        this.name = name;
+        this.height = 0;
+        this.weight = 0;
+    }
 
     // A method is written inside of the class beneath the constructor.
     public void printPerson(){
@@ -43,7 +54,12 @@ public class Person {
     If a method receives as parameters all the variables whose values it uses, it can have a static modifier.
      */
 
-    public void growOlder(){ this.age += 1; }
+    public void growOlder(){
+        //this.age += 1;
+        this.growOlder(1);
+    }
+
+    public void growOlder(int years) { this.age += years; }
 
     /*
     The keyword /void/ means that the method does not return a value.

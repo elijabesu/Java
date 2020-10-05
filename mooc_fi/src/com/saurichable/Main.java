@@ -101,6 +101,21 @@ public class Main {
         filesObject.fileReading();
         filesObject.teamsFileReading();
 
+            // Part 5
+        Clock clock = new Clock();
+        for (int i = 0; i < 10000 ; i++){
+            System.out.println(clock);
+            clock.advance();
+        }
+
          */
+        Person5 owo = new Person5("Napoleone Buonaparte", 51, 80, 1.70);
+        System.out.println(owo);
+
+        // since we have two constructors, both work
+        Person paul = new Person("Paul", 24);
+        Person ada = new Person("Ada");
+        System.out.println(paul);
+        System.out.println(ada);
     }
 }
