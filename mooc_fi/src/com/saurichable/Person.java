@@ -12,6 +12,9 @@ public class Person {
     public Person(String name, int age){
         this(name, age, 0, 0);
     }
+    public Person(String name, double height){
+        this(name, 0, height, 0);
+    }
     public Person(String name, int age, double height){
         this(name, age, height, 0);
     }
@@ -56,6 +59,6 @@ public class Person {
     }
     // do this instead:
     public String toString(){
-        return this.name + " is " + this.age + " years old.";
+        return this.name + " is " + this.height + "m tall.";
     }
 }

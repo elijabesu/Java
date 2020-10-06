@@ -35,15 +35,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef503c00-ef4a-469e-9eb6-fa3defb0336b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/saurichable/AmusementParkRide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/saurichable/HealthStation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/saurichable/PaymentCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/saurichable/PaymentTerminal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/saurichable/PersonBirthday.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/saurichable/SimpleDate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/saurichable/Hold.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/saurichable/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/saurichable/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/saurichable/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/saurichable/Suitcase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/saurichable/AmusementParkRide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/saurichable/AmusementParkRide.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/saurichable/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/saurichable/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/saurichable/OOP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/saurichable/OOP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/saurichable/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/saurichable/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,19 +86,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Numbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.saurichable.Numbers" />
-      <module name="mooc_fi" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.saurichable.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MainJAR" type="JarApplication">
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/mooc_fi_jar/mooc_fi.jar" />
       <option name="WORKING_DIRECTORY" value="C:\Users\eliska.faltynkova\Downloads\Java\mooc_fi" />
@@ -112,13 +98,11 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Numbers" />
       <item itemvalue="JAR Application.MainJAR" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Numbers" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +160,21 @@
       <option name="project" value="LOCAL" />
       <updated>1601891780514</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="More classes and objects">
+      <created>1601904769888</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1601904769888</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Part 5">
+      <created>1601980449806</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1601980449806</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,7 +208,9 @@
     <MESSAGE value="OOP" />
     <MESSAGE value="Finished part 4" />
     <MESSAGE value="Overloading" />
-    <option name="LAST_COMMIT_MESSAGE" value="Overloading" />
+    <MESSAGE value="More classes and objects" />
+    <MESSAGE value="Part 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Part 5" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="337" key="#BuildArtifactsBeforeRunChooser" timestamp="1601456744533">
@@ -221,50 +221,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="550" y="59" key="#Java/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601901963686" />
-    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601456753574">
+    <state x="414" y="175" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601964600741">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601456753574" />
-    <state x="721" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1601636153676">
+    <state x="414" y="175" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601964600741" />
+    <state x="721" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1601989799084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="721" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601636153676" />
+    <state x="721" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601989799084" />
     <state x="690" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1601456514632">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601456514632" />
-    <state x="587" y="88" key="CommitChangelistDialog2" timestamp="1601891776771">
+    <state x="587" y="88" key="CommitChangelistDialog2" timestamp="1601980447384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="587" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601891776771" />
+    <state x="587" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601980447384" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1601456712555">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601456712555" />
-    <state width="938" height="282" key="GridCell.Tab.0.bottom" timestamp="1601903069036">
+    <state width="938" height="282" key="GridCell.Tab.0.bottom" timestamp="1601991568137">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601903069036" />
-    <state width="938" height="282" key="GridCell.Tab.0.center" timestamp="1601903069034">
+    <state width="938" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601991568137" />
+    <state width="938" height="282" key="GridCell.Tab.0.center" timestamp="1601991568136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601903069034" />
-    <state width="938" height="282" key="GridCell.Tab.0.left" timestamp="1601903069033">
+    <state width="938" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601991568136" />
+    <state width="938" height="282" key="GridCell.Tab.0.left" timestamp="1601991568136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601903069033" />
-    <state width="938" height="282" key="GridCell.Tab.0.right" timestamp="1601903069036">
+    <state width="938" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601991568136" />
+    <state width="938" height="282" key="GridCell.Tab.0.right" timestamp="1601991568137">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601903069036" />
+    <state width="938" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601991568137" />
     <state x="540" y="263" key="IDE.errors.dialog" timestamp="1601459481886">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="263" key="IDE.errors.dialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601459481886" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1601460016861">
+    <state x="440" y="94" key="SettingsEditor" timestamp="1601964548218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601460016861" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601964548218" />
     <state width="498" height="398" key="SwitcherDM" timestamp="1601369559376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -273,10 +273,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="790" y="389" key="VCS.EditChangelistDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601459649054" />
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1601891786605">
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1601980451870">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601891786605" />
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601980451870" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1601626756220">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
