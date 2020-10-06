@@ -19,4 +19,15 @@ public class Books {
     public int getPages() { return this.pages; }
     public int getYear() { return this.year; }
 
+    public boolean equals(Object compared) {
+        if (this == compared) { return true; }
+        if (!(compared instanceof Books)) { return false; }
+        Books comparedBook = (Books) compared;
+        if (this.title.equals(comparedBook.title) &&
+                this.year == comparedBook.year &&
+                this.pages == comparedBook.pages) {
+            return true;
+        }
+        return false;
+    }
 }

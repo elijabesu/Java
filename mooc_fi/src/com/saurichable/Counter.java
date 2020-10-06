@@ -23,4 +23,9 @@ public class Counter {
     }
     public void increase(){ this.increase(1); }
     public void decrease(){ this.decrease(1); }
+    public Counter clone(){
+        Counter clone = new Counter((this.value));
+        return clone;
+    }
+    public String toString() { return ""+ this.value; }
 }

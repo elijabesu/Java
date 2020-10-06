@@ -96,6 +96,7 @@ public class Main {
         oopObject.objectsInList();
         oopObject.userInputObjectsInList();
         oopObject.userInputBooksList();
+        oopObject.userInputArchive();
 
         Files filesObject = new Files();
         filesObject.fileReading();
@@ -176,7 +177,6 @@ public class Main {
         System.out.println("remaining change " + change);
         System.out.println(unicafeExactum);
 
-         */
         PaymentTerminal unicafeExactum = new PaymentTerminal();
         System.out.println(unicafeExactum);
         PaymentCard annesCard = new PaymentCard(2);
@@ -188,5 +188,50 @@ public class Main {
         System.out.println("there was enough money: " + wasSuccessful);
         System.out.println("amount of money on the card is " + annesCard.getBalance() + " euros");
         System.out.println(unicafeExactum);
+
+        SimpleDate sd = new SimpleDate(5,9,1997);
+        sd.todayDate();
+        sd.todayTime();
+        sd.todayDateTime();
+        SimpleDate sd2 = new SimpleDate(5,2,1997);
+        SimpleDate sd3 = new SimpleDate(5,8,2020);
+        System.out.println(sd.equals(sd2));
+        System.out.println(sd.equals(sd3));
+
+        System.out.println(sd);
+        PersonBirthday ellie = new PersonBirthday("Ellie", sd, 158);
+        if (ellie.isOfLegalAge()) {
+            System.out.println("Yassss, I'm an adult");
+        } else {
+            System.out.println("Not an adult just yet.");
+        }
+        System.out.println(ellie);
+
+        Counter counter = new Counter(5);
+        counter.increase();
+        System.out.println(counter);
+        Counter clone = counter.clone();
+        clone.decrease(2);
+        System.out.println(clone);
+        System.out.println(counter);
+
+        Money a = new Money(10,0);
+        Money b = new Money(5,0);
+        Money c = a.plus(b);
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(a.lessThan(b));
+        System.out.println(b.lessThan(c));
+
+
+        Money a = new Money(10, 0);
+        Money b = new Money(3, 50);
+        Money c = a.minus(b);
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+
+         */
     }
 }

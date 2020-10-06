@@ -96,7 +96,12 @@ public class OOP {
             String title = splitData[0];
             int pages = Integer.valueOf(splitData[1]);
             int year = Integer.valueOf(splitData[2]);
-            books.add(new Books(title, pages, year));
+            Books newBook = new Books(title, pages, year);
+            if (books.contains(newBook)) {
+                System.out.println("This book has already been added.");
+            } else {
+                books.add(newBook);
+            }
         }
         System.out.print("What information should be printed? ");
         String toPrint = scanner.nextLine();
@@ -178,10 +183,48 @@ public class OOP {
     copied for the called method to use. With primitive variables, the value of the variable is conveyed to the method.
     With reference variables, it's a reference.
 
+    NULL
     The null reference can be set as the value of any reference type variable. If an object is referred to by nobody,
     it becomes "garbage". In the Java programming language the programmer need not worry about the program's memory use.
     From time to time, the automatic garbage collector of the Java language cleans up the objects that have become
     garbage. If the garbage collection did not happen, the garbage objects would reserve a memory location until the
     end of the program execution.
+
+    .EQUALS()
+    The method /equals/ is similar to the method toString in the respect that it is available for use even if it has
+    not been defined in the class. The default implementation of this method compares the equality of the references.
+    If we want to be able to compare two objects of our own design with the equals method, that method must be defined
+    in the class. The equals method is implemented in such a way that it can be used to compare the current object with
+    any other object. The method receives an Object-type object as its single parameter — all objects are Object-type,
+    in addition to their own type.
+
+    The /contains/ method of a list uses the equals method that is defined for the objects in its search for objects.
      */
+
+    public void userInputArchive(){
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Archive> archives = new ArrayList<>();
+        while (true) {
+            System.out.print("Identifier? ");
+            String id = scanner.nextLine();
+            if (id.isEmpty()) { break; }
+
+            System.out.print("Name? ");
+            String name = scanner.nextLine();
+            if (name.isEmpty()) { break; }
+
+            Archive newArchive = new Archive(id, name);
+
+            if (archives.contains(newArchive)) { continue; }
+            else { archives.add(newArchive); }
+        }
+        System.out.println();
+        System.out.println("== ITEMS ==");
+        if (archives.size() == 0) { System.out.println("Nothing is here."); }
+        else {
+            for (Archive archive: archives) {
+                System.out.println(archive);
+            }
+        }
+    }
 }

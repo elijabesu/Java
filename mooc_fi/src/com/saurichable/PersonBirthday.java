@@ -30,6 +30,14 @@ public class PersonBirthday {
     public String getName(){ return this.name; }
     public double getHeight() { return this.height; }
     public double getWeight(){ return this.weight; }
+    public int getAge() {
+        int age = this.birthday.getTodayYear() - this.birthday.getYear();
+        if (this.birthday.getTodayMonth() < this.birthday.getMonth()) { age -= 1; }
+        else if (this.birthday.getTodayMonth() == this.birthday.getMonth()) {
+            if (this.birthday.getTodayDay() < this.birthday.getDay()) { age -= 1; }
+        }
+        return age;
+    }
 
     // Setters:
     public void setBirthday(SimpleDate birthday){ this.birthday = birthday; }
@@ -37,7 +45,7 @@ public class PersonBirthday {
     public void setWeight(double weight) { this.weight = weight; }
 
     public boolean isOfLegalAge(){
-        if (this.age >= 18) { return true; }
+        if (this.getAge() >= 18) { return true; }
         else { return false; }
     }
     public double bodyMassIndex(){
@@ -45,15 +53,34 @@ public class PersonBirthday {
         return this.weight / (heightPerHundred * heightPerHundred);
     }
     public double maximumHeartRate(){
-        return 206.3 - (0.711 * this.age);
+        return 206.3 - (0.711 * this.getAge());
     }
 
     // do not do this:
     public void printPerson(){
-        System.out.println(this.name + " is " + this.age + " years old.");
+        System.out.println(this.name + " is " + this.getAge() + " years old.");
     }
     // do this instead:
     public String toString(){
-        return this.name + " is " + this.age + " years old.";
+        return this.name + " is " + this.getAge() + " years old.";
+    }
+
+    public boolean olderThan(PersonBirthday compared){
+        return this.birthday.before(compared.getBirthday());
+        // return this.getAge() > compared.getAge();
+    }
+
+    public boolean equals(Object compared) {
+        if (this == compared) { return true; }
+        if (!(compared instanceof PersonBirthday)) { return false; }
+
+        PersonBirthday comparedPerson = (PersonBirthday) compared;
+        if (this.name.equals(comparedPerson.name) &&
+                this.getAge() == comparedPerson.getAge() &&
+                this.weight == comparedPerson.weight &&
+                this.height == comparedPerson.height) {
+            return true;
+        }
+        return false;
     }
 }
