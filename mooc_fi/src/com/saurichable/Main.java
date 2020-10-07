@@ -264,8 +264,6 @@ public class Main {
         System.out.println("Book: " + book);
         System.out.println("Phone: " + phone);
 
-         */
-
         Item book = new Item("Lord of the rings", 2);
         Item phone = new Item("Nokia 3210", 1);
         Item brick = new Item("brick", 4);
@@ -298,5 +296,9 @@ public class Main {
         System.out.println();
         System.out.println("The suitcases in the hold contain the following items:");
         hold.printItems();
+
+        System.out.println(adasCase.getItems());
+
+         */
     }
 }
