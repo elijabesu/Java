@@ -21,7 +21,7 @@ public class Suitcase {
     }
     public String toString() {
         int totalWeight = this.totalWeight();
-        if (this.items.size() == 0) { return "no items (0 kg)" ; }
+        if (this.items.size() == 0) { return "no items (0 kg)"; }
         if (this.items.size() == 1) { return "1 item (" + totalWeight + " kg)"; }
         return this.items.size() + " items (" + totalWeight + " kg)";
     }
@@ -44,5 +44,27 @@ public class Suitcase {
             if (returnObject.getWeight() < item.getWeight()) { returnObject = item; }
         }
         return returnObject;
+    }
+    public ArrayList<Item> getItems() {
+        return this.items;
+    }
+    public boolean equals(Object object) {
+        if (this == object) { return true; }
+        if (!(object instanceof Suitcase)) { return false; }
+        Suitcase comparedSuitcase = (Suitcase) object;
+        boolean sameItems = false;
+        for (Item item: this.items) {
+            if (comparedSuitcase.getItems().contains(item)) { sameItems = true; }
+            else {
+                sameItems = false;
+                break;
+            }
+        }
+        if (this.totalWeight() == comparedSuitcase.totalWeight() &&
+                this.items.size() == comparedSuitcase.items.size() &&
+                sameItems == true) {
+            return true;
+        }
+        return false;
     }
 }

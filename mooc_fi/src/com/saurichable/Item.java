@@ -14,10 +14,10 @@ public class Item {
     public String toString() {
         return this.name + " (" + this.weight + " kg)";
     }
-    public boolean equals(Item item) {
-        if (this == item) { return true; }
-        if (!(item instanceof Item)) { return false; }
-        Item comparedItem = (Item) item;
+    public boolean equals(Object object) {
+        if (this == object) { return true; }
+        if (!(object instanceof Item)) { return false; }
+        Item comparedItem = (Item) object;
         if (this.name.equals(comparedItem.name) &&
                 this.weight == comparedItem.weight) {
             return true;
