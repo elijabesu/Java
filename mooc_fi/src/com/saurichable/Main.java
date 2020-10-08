@@ -1,5 +1,7 @@
 package com.saurichable;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         /*
@@ -299,6 +301,33 @@ public class Main {
 
         System.out.println(adasCase.getItems());
 
+        int[] numbers = {3, 2, 5, 4, 8};
+        System.out.println("Smallest: " + Algorithms.smallest(numbers));
+        System.out.println("Index of the smallest number: " + Algorithms.indexOfSmallest(numbers));
+
+        System.out.println(Algorithms.indexOfSmallestFrom(numbers, 0));
+        System.out.println(Algorithms.indexOfSmallestFrom(numbers, 1));
+        System.out.println(Algorithms.indexOfSmallestFrom(numbers, 2));
+
+        System.out.println(java.util.Arrays.toString(numbers));
+        Algorithms.swap(numbers, 1, 0);
+        System.out.println(java.util.Arrays.toString(numbers));
+        Algorithms.swap(numbers, 0, 3);
+        System.out.println(java.util.Arrays.toString(numbers));
+
+        int[] numbers = {8, 3, 7, 9, 1, 2, 4};
+        Algorithms.sort(numbers);
+
          */
+        ArrayList<Books> books = new ArrayList<>();
+        books.add(new Books("Hello", 20, 1998));
+        books.add(new Books("sfa", 2470, 1999));
+        books.add(new Books("Hesgdgllo", 250, 2001));
+        books.add(new Books("Helsdgdslo", 202, 2005));
+        books.add(new Books("Helgsdgdsglo", 202, 2011));
+        books.add(new Books("Hesdgsdgllo", 210, 2016));
+        books.add(new Books("Heldgsdglo", 201, 2020));
+        System.out.println(Algorithms.linearSearch(books, 2015));
+        System.out.println(Algorithms.binarySearch(books, 2011));
     }
 }
