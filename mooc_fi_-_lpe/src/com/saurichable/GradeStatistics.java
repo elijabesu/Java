@@ -37,17 +37,19 @@ public class GradeStatistics {
         }
         return (double) passed / this.points.size() * 100;
     }
-    public void gradeDistribution() {
+    public String gradeDistribution() {
+        String returned = "";
         for (int i = 5; i >= 0; i--) {
-            System.out.print(i + ": ");
-            printStars(amountOfGrades(i));
-            System.out.println();
+            returned += (i + ": " + printStars(amountOfGrades(i)) + "\n");
         }
+        return returned;
     }
-    public void printStars(int number) {
+    public String printStars(int number) {
+        String returned = "";
         for (int i = 1; i <= number; i++) {
-            System.out.print("*");
+            returned += "*";
         }
+        return returned;
     }
     public int amountOfGrades(int grade) {
         int amount = 0;

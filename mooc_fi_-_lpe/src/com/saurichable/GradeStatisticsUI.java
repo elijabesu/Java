@@ -19,27 +19,26 @@ public class GradeStatisticsUI {
             }
             this.gradeStatistics.add(number);
         }
-        this.average();
-        this.passingAverage();
-        this.passPercentage();
-        this.gradeDistribution();
+        System.out.println(this.average());
+        System.out.println(this.passingAverage());
+        System.out.println(this.passPercentage());
+        System.out.println(this.gradeDistribution());
     }
-    public void average() {
-        System.out.println("Point average (all): " + this.gradeStatistics.averageOfPoints());
+    public String average() {
+        return "Point average (all): " + this.gradeStatistics.averageOfPoints();
     }
-    public void passingAverage() {
+    public String passingAverage() {
         double passingAverage = this.gradeStatistics.averageOfPoints(50);
         if (passingAverage == -1) {
-            System.out.println("Point average (passing): -");
+            return "Point average (passing): -";
         } else {
-            System.out.println("Point average (passing): " + passingAverage);
+            return "Point average (passing): " + passingAverage;
         }
     }
-    public void passPercentage() {
-        System.out.println("Pass percentage: " + this.gradeStatistics.passingPercentage(50));
+    public String passPercentage() {
+        return "Pass percentage: " + this.gradeStatistics.passingPercentage(50);
     }
-    public void gradeDistribution() {
-        System.out.println("Grade distribution:");
-        this.gradeStatistics.gradeDistribution();
+    public String gradeDistribution() {
+        return "Grade distribution:\n" + this.gradeStatistics.gradeDistribution();
     }
 }
