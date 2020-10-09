@@ -1,25 +1,19 @@
 package com.saurichable;
 
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RecipeSearch {
-    private String path;
-    private ArrayList<Recipe> recipes;
+    private final String path;
+    private RecipesList recipesList;
+    private String filename;
 
     public RecipeSearch(String path) {
         this.path = path;
-        this.recipes = new ArrayList<>();
-    }
-    public Scanner readFile(String filename) {
-        try (Scanner scanner = new Scanner(Paths.get(this.path + filename))) {
-            return scanner;
-        } catch (Exception e) {
-            return null;
-        }
+        this.recipesList = new RecipesList();
     }
     public void loadRecipes(String filename) {
+        this.filename = filename;
         try (Scanner scanner = new Scanner(Paths.get(this.path + filename))) {
             while (scanner.hasNextLine()) {
                 String title = scanner.nextLine();
@@ -35,20 +29,65 @@ public class RecipeSearch {
                     }
                     recipe.addIngredient(ingredient);
                 }
-                this.recipes.add(recipe);
+                this.recipesList.add(recipe);
             }
         } catch (Exception e) {
             return;
         }
     }
-    public String getRecipes(String filename) {
-        if (this.recipes.size() == 0) {
-            return "Error reading the file: " + filename;
+    public String getRecipes() {
+        if (this.recipesList.size() == 0) {
+            return "Error reading the file: " + this.filename;
         }
         String returned = "Recipes:";
-        for (Recipe recipe: this.recipes) {
+        for (Recipe recipe: this.recipesList.getRecipes()) {
             returned +=  "\n" + recipe;
         }
         return returned;
+    }
+    public String getRecipeByName(String name) {
+        if (this.recipesList.size() == 0) {
+            return "Error reading the file: " + this.filename;
+        }
+        String found = "";
+        for (Recipe recipe: this.recipesList.getRecipes()) {
+            if (recipe.getName().contains(name)) {
+                found += "\n" + recipe;
+            }
+        }
+        if (found.length() == 0) {
+            return "No recipes found.";
+        }
+        return "\nRecipes:" + found;
+    }
+    public String getRecipeByCookingTime(int duration) {
+        if (this.recipesList.size() == 0) {
+            return "Error reading the file: " + this.filename;
+        }
+        String found = "";
+        for (Recipe recipe: this.recipesList.getRecipes()) {
+            if (recipe.getDuration() <= duration) {
+                found += "\n" + recipe;
+            }
+        }
+        if (found.length() == 0) {
+            return "No recipes found.";
+        }
+        return "\nRecipes:" + found;
+    }
+    public String getRecipeByIngredient(String ingredient) {
+        if (this.recipesList.size() == 0) {
+            return "Error reading the file: " + this.filename;
+        }
+        String found = "";
+        for (Recipe recipe: this.recipesList.getRecipes()) {
+            if (recipe.getIngredients().contains(ingredient)) {
+                found += "\n" + recipe;
+            }
+        }
+        if (found.length() == 0) {
+            return "No recipes found.";
+        }
+        return "\nRecipes:" + found;
     }
 }
