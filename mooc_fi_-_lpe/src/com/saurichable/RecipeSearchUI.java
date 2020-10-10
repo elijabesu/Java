@@ -7,7 +7,7 @@ public class RecipeSearchUI {
     private String filename;
 
     public RecipeSearchUI() {
-        this.recipeSearch = new RecipeSearch("C:\\Users\\eliska.faltynkova\\Downloads\\Java\\mooc_fi_-_lpe\\src\\com\\saurichable\\");
+        this.recipeSearch = new RecipeSearch("E:\\MEGA\\coding\\Java\\mooc_fi_-_lpe\\src\\com\\saurichable\\");
     }
 
     public void start() {
