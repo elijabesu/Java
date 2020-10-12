@@ -13,6 +13,7 @@ public class Main {
         //HashMapL.libraryHashMap();
         //HashMapL.abbreviationHashMap();
         //HashMapL.printingValuesOfHashMap();
-        HashMapL.printingValuesOfLibrary();
+        //HashMapL.printingValuesOfLibrary();
+        HashMapL.testIOU();
     }
 }

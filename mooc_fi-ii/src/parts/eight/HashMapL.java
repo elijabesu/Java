@@ -130,4 +130,14 @@ public class HashMapL {
     The /getOrDefault/ method of the HashMap searches for the key passed to it as a parameter from the HashMap.
     If the key is not found, it returns the value of the second parameter passed to it.
      */
+
+    public static void testIOU() {
+        IOU mattsIOU = new IOU();
+        mattsIOU.setSum("Arthur", 51.5);
+        mattsIOU.setSum("Michael", 30);
+        mattsIOU.setSum("Arthur", 10.5);
+
+        System.out.println(mattsIOU.howMuchDoIOweTo("Arthur"));
+        System.out.println(mattsIOU.howMuchDoIOweTo("Michael"));
+    }
 }
