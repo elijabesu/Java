@@ -1,5 +1,6 @@
 package parts.eight;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class HashMapL {
@@ -139,5 +140,72 @@ public class HashMapL {
 
         System.out.println(mattsIOU.howMuchDoIOweTo("Arthur"));
         System.out.println(mattsIOU.howMuchDoIOweTo("Michael"));
+    }
+
+    public static void bookHashMap() {
+        HashMap<Book, String> borrowers = new HashMap<>();
+        Book book = new Book("Book", 1, 2020);
+        borrowers.put(book, "Ellie");
+        borrowers.put(new Book("Test", 1, 2020), "Oliver");
+
+        System.out.println(borrowers.get(book));
+        System.out.println(borrowers.get(new Book("Book", 1, 2020))); // returns null without hashCode()
+        System.out.println(borrowers.get(new Book("Test", 1, 2020)));
+    }
+    /*
+    For a class to be used as a HashMap's key, we need to define for it:
+        - the equals method, so that all equal or approximately equal objects cause the comparison to return true and
+            all false for all the rest
+        - the hashCode method, so that as few objects as possible end up with the same hash value
+     */
+
+    public static void licensePlates() {
+        LicensePlate li1 = new LicensePlate("FI", "ABC-123");
+        LicensePlate li2 = new LicensePlate("FI", "UXE-465");
+        LicensePlate li3 = new LicensePlate("D", "B WQ-431");
+
+        ArrayList<LicensePlate> finnishPlates = new ArrayList<>();
+        finnishPlates.add(li1);
+        finnishPlates.add(li2);
+
+        LicensePlate newLi = new LicensePlate("FI", "ABC-123");
+        if (!finnishPlates.contains(newLi)) {
+            finnishPlates.add(newLi);
+        }
+        System.out.println("finnish: " + finnishPlates);
+
+        HashMap<LicensePlate, String> owners = new HashMap<>();
+        owners.put(li1, "Arto");
+        owners.put(li3, "Jürgen");
+
+        System.out.println("owners:");
+        System.out.println(owners.get(new LicensePlate("FI", "ABC-123")));
+        System.out.println(owners.get(new LicensePlate("D", "B WQ-431")));
+    }
+    public static void vehicleRegistry() {
+        VehicleRegistry vehicleRegistry = new VehicleRegistry();
+        LicensePlate li1 = new LicensePlate("FI", "ABC-123");
+        LicensePlate li2 = new LicensePlate("FI", "UXE-465");
+
+        boolean owo;
+        owo = vehicleRegistry.add(li1, "James");
+        System.out.println(owo);
+        owo = vehicleRegistry.add(new LicensePlate("owo", "you are not getting this"), "Ellie");
+        System.out.println(owo);
+        owo = vehicleRegistry.add(new LicensePlate("FI", "ABC-123"), "Jason");
+        System.out.println(owo);
+
+        System.out.println(vehicleRegistry.get(li1));
+        System.out.println(vehicleRegistry.get(li2));
+
+        vehicleRegistry.printLicensePlates();
+        vehicleRegistry.printOwners();
+
+        owo = vehicleRegistry.remove(li2);
+        System.out.println(owo);
+        owo = vehicleRegistry.remove(li1);
+        System.out.println(owo);
+
+        vehicleRegistry.printLicensePlates();
     }
 }
