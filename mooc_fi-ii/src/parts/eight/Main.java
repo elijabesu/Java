@@ -25,10 +25,12 @@ public class Main {
         //HashMapL.bookHashMap();
         //HashMapL.licensePlates();
         //HashMapL.vehicleRegistry();
-        
+
 
             // 4. GROUPING DATA USING HASH MAPS //
-            // 5. FAST DATA FETCHING AND GROUPING INFORMATION //
+
+        Grouping.testDictionaryOfManyTranslations();
+        Grouping.testStorageFacility();
 
     }
 }
