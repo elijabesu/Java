@@ -1,4 +1,4 @@
-package parts.nine;
+package parts.nine.inheritance;
 
 public class Part {
     private String identifier;

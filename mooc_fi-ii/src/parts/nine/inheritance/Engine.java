@@ -1,4 +1,4 @@
-package parts.nine;
+package parts.nine.inheritance;
 
 public class Engine extends Part {      // Engine inherits the functionality of the class Part
     private String engineType;

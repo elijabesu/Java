@@ -1,4 +1,4 @@
-package parts.nine;
+package parts.nine.inheritance;
 
 public class Subclass extends Superclass {
     public Subclass() {
