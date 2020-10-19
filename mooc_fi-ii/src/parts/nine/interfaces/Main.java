@@ -1,23 +1,25 @@
 package parts.nine.interfaces;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.HashSet;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         //testReadable();
         //owo();
         //testPackable();
+
+        /*
         System.out.print("Size of a List: ");
         testList();
         System.out.print("Size of a Map: ");
         testMap();
         System.out.print("Size of a Set: ");
         testSet();
+         */
+
+        //testWarehouse();
+        //testShoppingCart();
+        testStore();
     }
 
     /*
@@ -198,4 +200,59 @@ public class Main {
         The Collection interface also determines how the collection is iterated over. Any class that implements the
         Collection interface, either directly or indirectly, inherits the functionality required for a for-each loop.
      */
+
+    public static void testWarehouse() {
+        Warehouse warehouse = new Warehouse();
+        warehouse.addProduct("coffee", 5, 1);
+        warehouse.addProduct("buttermilk", 2, 20);
+
+        System.out.println("stock:");
+        System.out.println("coffee: " + warehouse.stock("coffee"));
+        System.out.println("sugar: " + warehouse.stock("sugar"));
+
+        System.out.println("products:");
+        for (String product: warehouse.products()) {
+            System.out.println(product);
+        }
+
+        System.out.println("taking coffee " + warehouse.take("coffee"));
+        System.out.println("taking coffee " + warehouse.take("coffee"));
+        System.out.println("taking sugar " + warehouse.take("sugar"));
+
+        System.out.println("stock:");
+        System.out.println("coffee: " + warehouse.stock("coffee"));
+        System.out.println("sugar: " + warehouse.stock("sugar"));
+    }
+
+    public static void testShoppingCart() {
+        ShoppingCart cart = new ShoppingCart();
+        cart.add("milk", 3);
+        cart.print();
+        System.out.println("cart price: " + cart.price() + "\n");
+
+        cart.add("buttermilk", 2);
+        cart.print();
+        System.out.println("cart price: " + cart.price() + "\n");
+
+        cart.add("milk", 3);
+        cart.print();
+        System.out.println("cart price: " + cart.price() + "\n");
+
+        cart.add("milk", 3);
+        cart.print();
+        System.out.println("cart price: " + cart.price() + "\n");
+    }
+
+    public static void testStore() {
+        Warehouse warehouse = new Warehouse();
+        warehouse.addProduct("coffee", 5, 10);
+        warehouse.addProduct("milk", 3, 20);
+        warehouse.addProduct("cream", 2, 55);
+        warehouse.addProduct("bread", 7, 8);
+
+        Scanner scanner = new Scanner(System.in);
+
+        Store store = new Store(warehouse, scanner);
+        store.shop("Ellie");
+    }
 }
