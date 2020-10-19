@@ -4,21 +4,19 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        //testReadable();
-        //owo();
-        //testPackable();
+        testReadable();
+        owo();
+        testPackable();
 
-        /*
         System.out.print("Size of a List: ");
         testList();
         System.out.print("Size of a Map: ");
         testMap();
         System.out.print("Size of a Set: ");
         testSet();
-         */
 
-        //testWarehouse();
-        //testShoppingCart();
+        testWarehouse();
+        testShoppingCart();
         testStore();
     }
 
