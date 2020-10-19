@@ -1,11 +1,23 @@
 package parts.nine.interfaces;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.HashSet;
 
 public class Main {
     public static void main(String[] args) {
         //testReadable();
-        owo();
+        //owo();
+        //testPackable();
+        System.out.print("Size of a List: ");
+        testList();
+        System.out.print("Size of a Map: ");
+        testMap();
+        System.out.print("Size of a Set: ");
+        testSet();
     }
 
     /*
@@ -87,5 +99,103 @@ public class Main {
     The value of the print method of the printer class lies in the fact that it can be given any class that implements
     the Readable interface as a parameter. Were we to call the method with any object instantiated from a class that
     inherits the Readable class, the method would function as desired.
+     */
+
+    public static void testPackable() {
+        Box box = new Box(10);
+
+        box.add(new Book("Fyodor Dostoevsky", "Crime and Punishment", 2)) ;
+        box.add(new Book("Robert Martin", "Clean Code", 1));
+        box.add(new Book("Kent Beck", "Test Driven Development", 0.7));
+
+        box.add(new CD("Pink Floyd", "Dark Side of the Moon", 1973));
+        box.add(new CD("Wigwam", "Nuclear Nightclub", 1975));
+        box.add(new CD("Rendezvous Park", "Closer to Being Here", 2012));
+
+        System.out.println(box);
+    }
+
+    /*
+    Interfaces can be used as return types in methods — just like regular variable types. Using interfaces in
+    programming enables reducing dependencies between classes.
+
+     // The List interface // defines the basic functionality related to lists. Because the ArrayList class
+        implements the `List` interface, one can also use it through the `List` interface. As we can see fom the Java
+        API of List, there are many classes that implement the `List` interface. One list is a linked list. A linked
+        list can be used through the List interface exactly the same way as an object created from ArrayList.
+
+        From the perspective of the user, both implementations of the List interface work the same way. The interface
+        abstracts their inner functionality. The internal structures of ArrayList and LinkedList differ quite a bit.
+        ArrayList saves objects to an array where fetching an object with a specific index is very fast. On the other
+        hand LinkedList constructs a list where each element contains a reference to the next element in the list.
+        When one searches for an object by index in a linked list, one has to go though the list from the beginning
+        until the index.
+
+        One can see noticeable performance differences between list implementations if the lists are big enough. The
+        strength of a linked list is that adding to it is always fast. ArrayList, on the other hand, is backed by
+        an array, which needs to be resized each time it gets full. Resizing the array requires creating a new array
+        and copying the values from the old array to the new one. On the other hand, searching objects by index is much
+        faster in an array list compared to a linked list.
+     */
+    public static void testList() {
+        List<String> names = new ArrayList<>();
+        names.add("First");
+        names.add("Second");
+        names.add("Third");
+
+        System.out.println(returnListSize(names));
+    }
+    public static int returnListSize(List<String> list) {
+        return list.size();
+    }
+
+    /*
+     // The Map interface // defines the basic behavior associated with hash tables. Because the HashMap class
+        implements the Map interface, it can also be accessed through the Map interface. The keys to the hash table are
+        obtained using the keySet method. The keySet method returns a set of elements that implement the Set interface.
+        You can use a for-each statement to go through a set that implements the Set interface. The hash values can be
+        obtained from the hash table using the values method. The values method returns a set of elements that implement
+        the Collection interface.
+    */
+    public static void testMap() {
+        Map<String, String> names = new HashMap<>();
+        names.put("1", "first");
+        names.put("2", "second");
+
+        System.out.println(returnMapSize(names));
+    }
+    public static int returnMapSize(Map<String, String> map) {
+        return map.size();
+    }
+
+    /*
+     // The Set interface// describes functionality related to sets. In Java, sets always contain either 0 or 1
+        amounts of any given object. As an example, the set interface is implemented by HashSet.
+
+        Note that HashSet in no way assumes the order of a set of elements. If objects created from custom classes are
+        added to the HashSet object, they must have both the equals and hashCode methods defined.
+     */
+    public static void testSet() {
+        Set<String> names = new HashSet<>();
+        names.add("first");
+        names.add("first");
+        names.add("second");
+        names.add("second");
+        names.add("second");
+
+        System.out.println(returnSetSize(names));
+    }
+    public static int returnSetSize(Set<String> set) {
+        return set.size();
+    }
+
+    /*
+     // The Collection interface // describes functionality related to collections. Among other things, lists and
+        sets are categorized as collections in Java — both the List and Set interfaces implement the Collection
+        interface. The Collection interface provides, for instance, methods for checking the existence of an item
+        (the method contains) and determining the size of a collection (the method size).
+
+        The Collection interface also determines how the collection is iterated over. Any class that implements the
+        Collection interface, either directly or indirectly, inherits the functionality required for a for-each loop.
      */
 }
