@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        //testEngine();
-        //testSubclass();
-        //testPerson();
-        //testPrintPersons();
-        //testToString();
-        //testPoints();
-        //testWarehouse();
-        //testHistoryWarehouse();
+        testEngine();
+        testSubclass();
+        testPerson();
+        testPrintPersons();
+        testToString();
+        testPoints();
+        testWarehouse();
+        testHistoryWarehouse();
         testBox();
     }
 
