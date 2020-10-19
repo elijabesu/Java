@@ -2,8 +2,11 @@ package parts.nine.polymorphism;
 
 public class Main {
     public static void main(String[] args) {
-        //testOrganism();
+        testOrganism();
         testHerd();
+        testDog();
+        testCat();
+        testNoiseCapable();
     }
 
     /*
@@ -46,5 +49,33 @@ public class Main {
         herd.addToHerd(new Organism(46, 52));
         herd.addToHerd(new Organism(19, 107));
         System.out.println(herd);
+    }
+
+    public static void testDog() {
+        Dog dog = new Dog();
+        dog.bark();
+        dog.eat();
+
+        Dog fido = new Dog("Fido");
+        fido.bark();
+    }
+
+    public static void testCat() {
+        Cat cat = new Cat();
+        cat.purr();
+        cat.eat();
+
+        Cat garfield = new Cat("Garfield");
+        garfield.purr();
+    }
+
+    public static void testNoiseCapable() {
+        NoiseCapable dog = new Dog();
+        dog.makeNoise();
+
+        NoiseCapable cat = new Cat("Garfield");
+        cat.makeNoise();
+        Cat c = (Cat) cat;
+        c.purr();
     }
 }
