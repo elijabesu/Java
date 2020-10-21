@@ -337,7 +337,7 @@ public class Main {
     public static void presidents() {
         List<Person> presidents = new ArrayList<>();
         try {
-            Files.lines(Paths.get(System.getProperty("user.dir") + "\\src\\parts\\ten\\streams\\presidents.txt"))
+            Files.lines(Paths.get(System.getProperty("user.dir") + "\\files\\presidents.txt"))
                     .map(row -> row.split("; ")) // split the row into name and year
                     .filter(parts -> parts.length >= 2) // filter out empty rows
                     .map(parts -> new Person(parts[0], Integer.valueOf(parts[1]))) // convert parts into people
@@ -350,7 +350,7 @@ public class Main {
     public static List<Book> books(String file) {
         List<Book> books = new ArrayList<>();
         try {
-            Files.lines(Paths.get(System.getProperty("user.dir") + "\\src\\parts\\ten\\streams\\" + file))
+            Files.lines(Paths.get(System.getProperty("user.dir") + "\\files\\" + file))
                     .map(row -> row.split(","))
                     .filter(parts -> parts.length >= 4)
                     .map(parts -> new Book(parts[3], parts[0], Integer.valueOf(parts[2]), Integer.valueOf(parts[1])))
