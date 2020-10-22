@@ -4,13 +4,18 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         //sortClubMembers();
         //sortPeople();
-        literacyComparison();
+        //literacyComparison();
+        //comparePeople();
+
+        BookUI bookUI = new BookUI();
+        bookUI.start();
     }
 
     /*
@@ -94,5 +99,32 @@ public class Main {
         } catch (Exception e) {
             System.out.println("Error: " + e);
         }
+    }
+
+    /*
+        // Sorting By Multiple Criteria //
+    The Comparator class provides two essential methods for sorting: comparing and thenComparing. The comparing method
+    is passed the value to be compared first, and the thenComparing method is the next value to be compared. The
+    thenComparing method can be used many times by chaining methods, which allows virtually unlimited values to be used
+    for comparison.
+
+    When we sort objects, the comparing and thenComparing methods are given a reference to the object's type - the
+    method is called in order and the values returned by the method are compared. The method reference is given as
+    Class::method.
+     */
+
+    public static void comparePeople() {
+        List<Person> people = new ArrayList<>();
+        people.add(new Person("A", 2000));
+        people.add(new Person("B", 1999));
+        people.add(new Person("C", 2001));
+        people.add(new Person("D", 2000));
+        people.stream().forEach(p -> System.out.println(p));
+
+        System.out.println();
+
+        Comparator<Person> comparator = Comparator.comparing(Person::getBirthYear).thenComparing(Person::getName);
+        Collections.sort(people, comparator);
+        people.stream().forEach(p -> System.out.println(p));
     }
 }
