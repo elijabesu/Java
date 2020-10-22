@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         //checkStudentIDFormat();
-        checker();
+        //checker();
+        enumCard();
     }
 
     /*
@@ -143,5 +144,49 @@ public class Main {
 
     In its simplest form, enum lists the constant values it declares, separated by a comma. Enum types, i.e., constants,
     are conventionally written with capital letters.
+        * see Suit.java
+     */
+
+    public static void enumCard() {
+        Card first = new Card(10, Suit.HEART);
+
+        System.out.println(first);
+
+        if (first.getSuit() == Suit.SPADE) {
+            System.out.println("is a spade");
+        } else {
+            System.out.println("is not a spade");
+        }
+    }
+
+    /*
+        Comparing Enums
+    Each enum field gets a unique number code, and they can be compared using the equals sign. Just as other classes in
+    Java, these values also inherit the Object class and its equals method. The equals method compares this numeric
+    identifier in enum types too.
+
+    The numeric identifier of an enum field value can be found with ordinal(). The method actually returns an order
+    number - if the enum value is presented first, its order number is 0. If its second, the order number is 1, etc.
+
+        // Object References In Enums //
+    Enumerated types may contain object reference variables. The values of the reference variables should be set in
+    an internal constructor of the class defining the enumerated type, i.e., within a constructor having a private
+    access modifier. Enum type classes cannot have a public constructor.
+        * see Colour.java
+
+        // Iterator //
+    ArrayList and other "object containers" that implement the Collection interface implement the Iterable interface,
+    and they can also be iterated over with the help of an iterator - an object specifically designed to go through
+    a particular type of object collection.
+        * see Hand.java
+
+    The iterator can be thought of as a "finger" that always points to a particular object inside the list. Initially
+    it points to the first item, then to the next, and so on... until all the objects have been gone through with the
+    help of the "finger".
+
+    The iterator offers a few methods. The hasNext() method is used to ask if there are any objects still to be
+    iterated over. If there are, the next object in line can be requested from the iterator using the next() method.
+    This method returns the next object in line to be processed and moves the iterator, or "finger", to point to th
+    following object in the collection.
      */
 }
