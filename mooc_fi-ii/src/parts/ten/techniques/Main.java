@@ -7,8 +7,14 @@ public class Main {
     public static void main(String[] args) {
         //checkStudentIDFormat();
         //checker();
+
         //enumCard();
-        employees();
+
+        //employees();
+
+        //sortThemCards();
+        //sortingCards();
+        sortingHand();
     }
 
     /*
@@ -204,5 +210,66 @@ public class Main {
         System.out.println("==");
 
         university.print();
+    }
+
+    public static void sortThemCards() {
+        Hand hand1 = new Hand();
+
+        hand1.add(new Card(2, Suit.DIAMOND));
+        hand1.add(new Card(14, Suit.SPADE));
+        hand1.add(new Card(12, Suit.HEART));
+        hand1.add(new Card(2, Suit.SPADE));
+
+        Hand hand2 = new Hand();
+
+        hand2.add(new Card(11, Suit.DIAMOND));
+        hand2.add(new Card(11, Suit.SPADE));
+        hand2.add(new Card(11, Suit.HEART));
+
+        int comparison = hand1.compareTo(hand2);
+
+        if (comparison < 0) {
+            System.out.println("better hand is");
+            hand2.print();
+        } else if (comparison > 0){
+            System.out.println("better hand is");
+            hand1.print();
+        } else {
+            System.out.println("hands are equal");
+        }
+    }
+
+    /*
+    Alternative sorting systems are possible through different sorting classes. Such a class must have the
+    Comparator<Card> interface. An object of the sorting class will then compare two cards give as parameters. The
+    class only has one method, compare(Card c1, Card c2), which returns a negative value if the card c1 should be
+    sorted before card c2, a positive value if card c2 comes before card c1, and zero if they are equal.
+     */
+
+    public static void sortingCards() {
+        ArrayList<Card> cards = new ArrayList<>();
+
+        cards.add(new Card(3, Suit.SPADE));
+        cards.add(new Card(2, Suit.DIAMOND));
+        cards.add(new Card(14, Suit.SPADE));
+        cards.add(new Card(12, Suit.HEART));
+        cards.add(new Card(2, Suit.SPADE));
+
+        cards.stream().sorted(new BySuitInValueOrder()).forEach(card -> System.out.println(card));
+    }
+
+    public static void sortingHand() {
+        Hand hand = new Hand();
+
+        hand.add(new Card(12, Suit.HEART));
+        hand.add(new Card(4, Suit.SPADE));
+        hand.add(new Card(2, Suit.DIAMOND));
+        hand.add(new Card(14, Suit.SPADE));
+        hand.add(new Card(7, Suit.HEART));
+        hand.add(new Card(2, Suit.SPADE));
+
+        hand.sortBySuit();
+
+        hand.print();
     }
 }

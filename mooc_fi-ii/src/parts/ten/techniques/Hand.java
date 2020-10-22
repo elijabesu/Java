@@ -1,10 +1,11 @@
 package parts.ten.techniques;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class Hand {
+public class Hand implements Comparable<Hand> {
     private List<Card> cards;
 
     public Hand() {
@@ -27,5 +28,22 @@ public class Hand {
         while (iterator.hasNext()) {
             if (iterator.next().getValue() < value) iterator.remove();
         }
+    }
+
+    public void sort() {
+        Collections.sort(cards);
+    }
+
+    public void sortBySuit() {
+        Collections.sort(cards, new BySuitInValueOrder());
+    }
+
+    public int sum() {
+        return cards.stream().map(card -> card.getValue()).reduce(0, (s, v) -> s + v);
+    }
+
+    @Override
+    public int compareTo(Hand o) {
+        return sum() - o.sum();
     }
 }

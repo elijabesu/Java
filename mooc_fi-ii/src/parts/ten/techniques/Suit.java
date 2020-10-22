@@ -1,5 +1,5 @@
 package parts.ten.techniques;
 
 public enum Suit {
-    DIAMOND, SPADE, CLUB, HEART
+    CLUB, DIAMOND, HEART, SPADE
 }
