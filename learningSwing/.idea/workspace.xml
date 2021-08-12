@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bfca7a5-1675-4f9d-9cb4-fb21ed6f3b65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learningSwing.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DragDrop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DragDrop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/august/SimpleAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/august/SimpleAnimation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +27,34 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.TwoButtons">
+    <configuration name="DragDrop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DragDrop" />
+      <module name="learningSwing" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GameWindow" />
+      <module name="learningSwing" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleAnimation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="august.SimpleAnimation" />
+      <module name="learningSwing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="august.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TwoButtons" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="august.TwoButtons" />
       <module name="learningSwing" />
@@ -42,15 +68,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -58,6 +82,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.TwoButtons" />
+        <item itemvalue="Application.SimpleAnimation" />
+        <item itemvalue="Application.GameWindow" />
+        <item itemvalue="Application.DragDrop" />
       </list>
     </recent_temporary>
   </component>
@@ -71,6 +98,7 @@
       <updated>1628795918688</updated>
       <workItem from="1628795920337" duration="157000" />
       <workItem from="1628796086883" duration="165000" />
+      <workItem from="1628796412199" duration="461000" />
     </task>
     <servers />
   </component>
