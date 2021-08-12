@@ -11,7 +11,8 @@ public class DragDrop extends JFrame {
     public JLabel blueLabel;
     public JLabel purpleLabel;
 
-    public JButton button;
+//    public JButton button;
+    public JLabel label;
 
     public DragDrop() {
         ImageIcon red = new ImageIcon("src/resources/red.png");
@@ -36,8 +37,9 @@ public class DragDrop extends JFrame {
         blueLabel.addMouseListener(listener);
         purpleLabel.addMouseListener(listener);
 
-        button = new JButton(green);
-        button.setFocusable(false);
+//        button = new JButton(green);
+//        button.setFocusable(false);
+        label = new JLabel(green, JLabel.CENTER);
 
         redLabel.setTransferHandler(new TransferHandler("icon"));
         orangeLabel.setTransferHandler(new TransferHandler("icon"));
@@ -45,9 +47,11 @@ public class DragDrop extends JFrame {
         greenLabel.setTransferHandler(new TransferHandler("icon"));
         blueLabel.setTransferHandler(new TransferHandler("icon"));
         purpleLabel.setTransferHandler(new TransferHandler("icon"));
-        button.setTransferHandler(new TransferHandler("icon"));
+//        button.setTransferHandler(new TransferHandler("icon"));
+        label.setTransferHandler(new TransferHandler("icon"));
 
-        createLayout(redLabel, orangeLabel, yellowLabel, greenLabel, blueLabel, purpleLabel, button);
+//        createLayout(redLabel, orangeLabel, yellowLabel, greenLabel, blueLabel, purpleLabel, button);
+        createLayout(redLabel, orangeLabel, yellowLabel, greenLabel, blueLabel, purpleLabel, label);
 
         setTitle("Icon Drag & Drop");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
