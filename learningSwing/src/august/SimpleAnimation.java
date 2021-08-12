@@ -25,8 +25,8 @@ public class SimpleAnimation {
         frame.setVisible(true);
 
         for (int i = 0; i < 130; i++) {
-            x++;
-            y++;
+            if (i > 50) x--; else x+=2;
+            if (i > 90) y-=2; else y++;
 
             drawPanel.repaint();
 
