@@ -21,6 +21,7 @@ public class SimpleAnimation {
         MyDrawPanel drawPanel = new MyDrawPanel();
 
         frame.getContentPane().add(drawPanel);
+        frame.setTitle("Simple Animation");
         frame.setSize(300, 300);
         frame.setVisible(true);
 
