@@ -13,6 +13,8 @@ public class Layouts {
     public void go() {
         JFrame frame = new JFrame(); // JFrame's default is BorderLayout
         JPanel panel = new JPanel(); // JPanel's default is FlowLayout
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS)); // so we change it to BoxLayout
+        // ^ the constructor needs to know which axis to use (Y for vertical stack)
         panel.setBackground(Color.PINK);
 //        JButton button = new JButton("click me");
         JButton button = new JButton("click me like you mean it");
