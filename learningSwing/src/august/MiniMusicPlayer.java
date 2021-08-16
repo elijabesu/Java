@@ -17,6 +17,7 @@ public class MiniMusicPlayer {
         drawPanel = new MyDrawPanel();
         frame.setContentPane(drawPanel);
         frame.setBounds(30, 30, 300, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
 
